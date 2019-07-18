@@ -12,20 +12,25 @@ echo "<br> ----------- <br>";
 ?>
 
 <?php
-// $waktu = 7890 - 30;
+$waktu = 800;
+$detik = fmod($waktu, 60);
+$tempmenit = ($waktu - $detik) / 60;
+$menit = fmod($tempmenit, 60);
+$jam = ($tempmenit - $menit) / 60;
+$lama = $jam . " Jam " . $menit . " Menit " . number_format($detik, 2) . " detik";
+echo $lama;
 
-// echo $waktu;
+?>
 
-// die;
+<?php
+// $waktunya = 8000;
+// $jam = round($waktunya / 3600);
+// $jam1 = $jam * 3600;
+// $jam2 = $waktunya - $jam1;
 
-// $ detik = fmod($waktu, 60);
-// echo $detik;
-// die;
-// $tempmenit = ($waktu - $detik) / 60;
-// $menit = fmod($tempmenit, 60);
-// $jam = ($tempmenit - $menit) / 60;
-// $lama = $jam . " Jam " . $menit . " Menit " . number_format($detik, 2) . " detik";
-
-// echo $lama;
+// $menit = $menit / 60;
+// $menit2 = $menit1 * 60;
+// $menit3 = $menit - 60;
+// echo $jam . " " . $jam1 . " " . $menit;
 
 ?>
